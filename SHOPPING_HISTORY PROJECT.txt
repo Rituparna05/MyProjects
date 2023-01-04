@@ -1,0 +1,23 @@
+USE "MY_SNOWFLAKE_DATABASE"
+
+SELECT * FROM SHOPPING_HISTORY;
+
+
+-- TASK 1
+
+
+
+ insert into shopping_history values
+ ('milk',2,25),
+ ('egg',5,4),
+ ('bread',1,10),
+ ('milk',1,20),
+ ('milk',2,20),
+ ('bread',1,50),
+ ('cornflakes',3,40),
+ ('cornflakes',2,55),
+ ('milk',1,28),
+ ('jam',4,5),
+ ('jam',4,5);
+ 
+SELECT PRODUCT, SUM(QUANTITY*UNIT_PRICE) AS TOTAL_PRICE FROM SHOPPING_HISTORY GROUP BY 1;
